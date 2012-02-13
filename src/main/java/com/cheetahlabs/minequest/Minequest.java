@@ -39,13 +39,13 @@ public class Minequest extends JavaPlugin {
 	
 	private String version;
 	private static Server server;
-	public static Minequest plugin;
 	public final Logger mqLogger = Logger.getLogger("Minecraft");
 	public final ServerChatPlayerListener playerListener = new ServerChatPlayerListener(this);
     public static MobHandler mobHandler;
 	public static ConfigHandler config;
     public static QuesterHandler questerHandler;
     public static TownHandler townHandler;
+    public static Minequest Minequest;
 	
 	public static void log(String string) {
 		//log.info("[MineQuest] " + string);
@@ -192,12 +192,10 @@ public class Minequest extends JavaPlugin {
 			townHandler.towns.add(new Town(name, getServer().getWorld(worlds.get(i++))));
 		}
 
-		bl = new MineQuestBlockListener();
-		el = new MineQuestEntityListener();
-		pl = new MineQuestPlayerListener();
-//		sl = new MineQuestServerListener();
-		wl = new MineQuestWorldListener();
-//		vl = new MineQuestVehicleListener();
+		blockL = new MineQuestBlockListener();
+		entitityL = new MineQuestEntityListener();
+		playerL = new MineQuestPlayerListener();
+		worldL = new MineQuestWorldListener();
 	
         System.out.println(pdfFile.getName() + " version " + pdfFile.getVersion() + " is enabled!");
 		
