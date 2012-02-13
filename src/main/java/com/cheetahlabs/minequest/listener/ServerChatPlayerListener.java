@@ -1,11 +1,12 @@
 package com.cheetahlabs.minequest.listener;
 
 import org.bukkit.entity.Player;
+import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerChatEvent;
 
 import com.cheetahlabs.minequest.Minequest;
 
-public class ServerChatPlayerListener {
+public class ServerChatPlayerListener implements Listener {
 	public static Minequest plugin;
 	
 	public ServerChatPlayerListener(Minequest instance) {
